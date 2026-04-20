@@ -1,0 +1,24 @@
+KUBERNETES DASHBOARD - ACTUALLY WORKING ACCESS
+==============================================
+
+Dashboard v2 is now installed and accessible via NodePort.
+
+ACCESS URL:
+-----------
+https://192.168.0.100:32459
+(or any node IP with port 32459)
+
+ADMIN TOKEN:
+------------
+eyJhbGciOiJSUzI1NiIsImtpZCI6IndZLUxqSGxTUXgwMk53RHNIZDU1bG9GMkFIUjN1UnNYRnN6ODFVNEF5OHcifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiXSwiZXhwIjoyMDY5NzYzNjM2LCJpYXQiOjE3NTQ0MDM2MzYsImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwianRpIjoiNzA2MjI4YTMtMjUyMi00MGJmLTkyZTgtYjQ4Mzc4YmE5NjA3Iiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsInNlcnZpY2VhY2NvdW50Ijp7Im5hbWUiOiJhZG1pbi11c2VyIiwidWlkIjoiMDA3NjExZDMtY2VjOS00M2ZhLWIwNDAtZGUwMDNhZTIwMDhkIn19LCJuYmYiOjE3NTQ0MDM2MzYsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDprdWJlcm5ldGVzLWRhc2hib2FyZDphZG1pbi11c2VyIn0.DNbxD4ljKm45S0xWsvUc2nA8MJtrXZOnmRG316T-XRFv0B2o4CuI-zwrJMWUAaq3Yfmv9Ro0ukJQvVQptlKaPDvFdrGe3j_CdWNi8-CQ-iKehgnZIW7yUZenGoLVT08fcL0DjM4vt4-h1UOhcIfYizx9X5DiLdBLH7IFXZ7SGG_gFWYteO0uCGY2NeNsi_5DlFn_pPl6APLp1klKwg_pGSVDDh5RYmQEhJQth2rpqMM7CSvfMl--g6HsBqDeCJYyQhmIFiguYtc3ByhjZnLh9lPzEICPhFIph2UOhuHDvbqO5fixUpmgHxJauN2Zmk-wDv_pTu2_JwuPlXdvb90YDw
+
+HOW TO ACCESS:
+--------------
+1. Open browser to https://192.168.0.100:32459
+2. Accept the certificate warning
+3. Choose "Token" authentication
+4. Paste the admin token above
+5. Click "Sign in"
+
+This is Dashboard v2.7.0 (stable) with direct NodePort access.
+No proxies, no port forwarding, just direct access.

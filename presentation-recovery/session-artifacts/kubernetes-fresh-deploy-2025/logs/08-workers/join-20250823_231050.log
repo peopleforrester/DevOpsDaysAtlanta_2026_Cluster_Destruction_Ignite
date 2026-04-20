@@ -1,0 +1,11 @@
+Joining worker nodes to cluster
+================================
+
+=== Joining k8s04 (192.168.0.53) ===
+Executing kubeadm join...
+[preflight] Running pre-flight checks
+[preflight] Reading configuration from the "kubeadm-config" ConfigMap in namespace "kube-system"...
+[preflight] Use 'kubeadm init phase upload-config --config your-config-file' to re-upload it.
+W0824 03:10:51.082676 3760240 configset.go:78] Warning: No kubeproxy.config.k8s.io/v1alpha1 config is loaded. Continuing without it: configmaps "kube-proxy" is forbidden: User "system:bootstrap:xh0weg" cannot get resource "configmaps" in API group "" in the namespace "kube-system"
+error execution phase preflight: unable to fetch the kubeadm-config ConfigMap: failed to get component configs: could not download the kubelet configuration from ConfigMap "kubelet-config": configmaps "kubelet-config" is forbidden: User "system:bootstrap:xh0weg" cannot get resource "configmaps" in API group "" in the namespace "kube-system"
+To see the stack trace of this error execute with --v=5 or higher

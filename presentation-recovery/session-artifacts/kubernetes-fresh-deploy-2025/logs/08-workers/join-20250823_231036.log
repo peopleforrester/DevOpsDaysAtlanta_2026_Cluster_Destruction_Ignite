@@ -1,0 +1,10 @@
+Joining worker nodes to cluster
+================================
+
+=== Joining k8s04 (192.168.0.53) ===
+Executing kubeadm join...
+[preflight] Running pre-flight checks
+[preflight] Reading configuration from the "kubeadm-config" ConfigMap in namespace "kube-system"...
+[preflight] Use 'kubeadm init phase upload-config --config your-config-file' to re-upload it.
+error execution phase preflight: unable to fetch the kubeadm-config ConfigMap: failed to get config map: configmaps "kubeadm-config" is forbidden: User "system:bootstrap:xh0weg" cannot get resource "configmaps" in API group "" in the namespace "kube-system"
+To see the stack trace of this error execute with --v=5 or higher

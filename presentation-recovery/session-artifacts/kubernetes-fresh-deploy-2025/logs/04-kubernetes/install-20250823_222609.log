@@ -1,0 +1,104 @@
+Installing Kubernetes 1.33.4 on all nodes
+================================================
+
+=== Installing on k8s01 (192.168.0.50) ===
+✓ Sysctl configured
+✓ Swap disabled
+✓ Prerequisites installed
+✓ Repository added
+✓ Kubernetes 1.33.4 installed
+✓ Packages held
+✓ Crictl configured
+✓ Kubelet enabled
+✓ Installed: v1.33.4
+
+=== Installing on k8s02 (192.168.0.51) ===
+✓ Sysctl configured
+✓ Swap disabled
+✓ Prerequisites installed
+✓ Repository added
+✓ Kubernetes 1.33.4 installed
+✓ Packages held
+✓ Crictl configured
+✓ Kubelet enabled
+✓ Installed: v1.33.4
+
+=== Installing on k8s03 (192.168.0.52) ===
+✓ Sysctl configured
+✓ Swap disabled
+✓ Prerequisites installed
+✓ Repository added
+✓ Kubernetes 1.33.4 installed
+✓ Packages held
+✓ Crictl configured
+✓ Kubelet enabled
+✓ Installed: v1.33.4
+
+=== Installing on k8s04 (192.168.0.53) ===
+✓ Sysctl configured
+✓ Swap disabled
+✓ Prerequisites installed
+✓ Repository added
+✓ Kubernetes 1.33.4 installed
+✓ Packages held
+✓ Crictl configured
+✓ Kubelet enabled
+✓ Installed: v1.33.4
+
+=== Installing on k8s05 (192.168.0.54) ===
+✓ Sysctl configured
+✓ Swap disabled
+✓ Prerequisites installed
+✓ Repository added
+✓ Kubernetes 1.33.4 installed
+✓ Packages held
+✓ Crictl configured
+✓ Kubelet enabled
+✓ Installed: v1.33.4
+
+=== Installing on k8s06 (192.168.0.55) ===
+✓ Sysctl configured
+✓ Swap disabled
+✓ Prerequisites installed
+✓ Repository added
+✓ Kubernetes 1.33.4 installed
+✓ Packages held
+✓ Crictl configured
+✓ Kubelet enabled
+✓ Installed: v1.33.4
+
+=== Installing on k8s07 (192.168.0.56) ===
+✓ Sysctl configured
+✓ Swap disabled
+✓ Prerequisites installed
+✓ Repository added
+✓ Kubernetes 1.33.4 installed
+✓ Packages held
+✓ Crictl configured
+✓ Kubelet enabled
+✓ Installed: v1.33.4
+
+=== Installing on k8s08 (192.168.0.57) ===
+✓ Sysctl configured
+✓ Swap disabled
+✓ Prerequisites installed
+✓ Repository added
+✓ Kubernetes 1.33.4 installed
+✓ Packages held
+✓ Crictl configured
+✓ Kubelet enabled
+✓ Installed: v1.33.4
+
+=== Installing on k8s09 (192.168.0.58) ===
+✓ Sysctl configured
+✓ Swap disabled
+✓ Prerequisites installed
+✓ Repository added
+✓ Kubernetes 1.33.4 installed
+✓ Packages held
+✓ Crictl configured
+✓ Kubelet enabled
+✓ Installed: v1.33.4
+
+================================================
+Kubernetes 1.33.4 installed on all nodes!

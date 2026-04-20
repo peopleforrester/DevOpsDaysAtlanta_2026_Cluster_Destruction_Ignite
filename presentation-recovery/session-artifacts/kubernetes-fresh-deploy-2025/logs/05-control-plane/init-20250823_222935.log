@@ -1,0 +1,7 @@
+Initializing control plane on k8s01 with VIP 192.168.0.199
+================================================
+Installing kube-vip v1.0.0...
+
+gzip: stdin: not in gzip format
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now

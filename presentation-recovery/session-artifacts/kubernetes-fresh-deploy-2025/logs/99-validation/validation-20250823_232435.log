@@ -1,0 +1,120 @@
+===========================================
+Kubernetes Cluster Final Validation
+===========================================
+
+=== CLUSTER INFORMATION ===
+Kubernetes Version:
+Client Version: v1.33.3
+Kustomize Version: v5.6.0
+
+=== NODE STATUS ===
+NAME    STATUS   ROLES    AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
+k8s01   Ready    <none>   34m   v1.33.4   192.168.0.50   <none>        Ubuntu 24.04.3 LTS   6.8.0-78-generic    containerd://2.1.4
+k8s04   Ready    <none>   13m   v1.33.4   192.168.0.53   <none>        Ubuntu 24.04.3 LTS   6.14.0-28-generic   containerd://2.1.4
+k8s05   Ready    <none>   13m   v1.33.4   192.168.0.54   <none>        Ubuntu 24.04.3 LTS   6.14.0-28-generic   containerd://2.1.4
+k8s06   Ready    <none>   13m   v1.33.4   192.168.0.55   <none>        Ubuntu 24.04.3 LTS   6.14.0-28-generic   containerd://2.1.4
+k8s07   Ready    <none>   13m   v1.33.4   192.168.0.56   <none>        Ubuntu 24.04.3 LTS   6.14.0-28-generic   containerd://2.1.4
+k8s08   Ready    <none>   13m   v1.33.4   192.168.0.57   <none>        Ubuntu 24.04.3 LTS   6.14.0-28-generic   containerd://2.1.4
+k8s09   Ready    <none>   12m   v1.33.4   192.168.0.58   <none>        Ubuntu 24.04.2 LTS   6.14.0-28-generic   containerd://2.1.4
+
+=== NODE RESOURCES ===
+NAME    CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+k8s01   238m         5%       959Mi           6%          
+k8s04   55m          1%       492Mi           3%          
+k8s05   59m          1%       508Mi           3%          
+k8s06   98m          2%       482Mi           6%          
+k8s07   76m          0%       1914Mi          12%         
+k8s08   56m          1%       463Mi           2%          
+k8s09   36m          0%       617Mi           0%          
+
+=== SYSTEM PODS STATUS ===
+kube-system namespace:
+NAME                               READY   STATUS             RESTARTS      AGE     IP             NODE    NOMINATED NODE   READINESS GATES
+cilium-2lqw5                       1/1     Running            0             13m     192.168.0.54   k8s05   <none>           <none>
+cilium-4fqp2                       0/1     CrashLoopBackOff   7 (56s ago)   12m     192.168.0.58   k8s09   <none>           <none>
+cilium-envoy-9tfc9                 1/1     Running            0             13m     192.168.0.53   k8s04   <none>           <none>
+cilium-envoy-bv6f9                 1/1     Running            0             12m     192.168.0.58   k8s09   <none>           <none>
+cilium-envoy-cczgp                 1/1     Running            0             13m     192.168.0.56   k8s07   <none>           <none>
+cilium-envoy-cz8gb                 1/1     Running            0             25m     192.168.0.50   k8s01   <none>           <none>
+cilium-envoy-gckkh                 1/1     Running            0             13m     192.168.0.55   k8s06   <none>           <none>
+cilium-envoy-mbp49                 1/1     Running            0             13m     192.168.0.57   k8s08   <none>           <none>
+cilium-envoy-v96jc                 1/1     Running            0             13m     192.168.0.54   k8s05   <none>           <none>
+cilium-m8mll                       1/1     Running            0             13m     192.168.0.56   k8s07   <none>           <none>
+cilium-mtxrj                       1/1     Running            0             25m     192.168.0.50   k8s01   <none>           <none>
+cilium-operator-75f8dd8878-mmbqv   1/1     Running            0             25m     192.168.0.50   k8s01   <none>           <none>
+cilium-swglq                       1/1     Running            0             13m     192.168.0.53   k8s04   <none>           <none>
+cilium-vhjjm                       1/1     Running            0             13m     192.168.0.55   k8s06   <none>           <none>
+cilium-w95v9                       1/1     Running            0             13m     192.168.0.57   k8s08   <none>           <none>
+etcd-k8s01                         1/1     Running            4             33m     192.168.0.50   k8s01   <none>           <none>
+kube-apiserver-k8s01               1/1     Running            4             33m     192.168.0.50   k8s01   <none>           <none>
+kube-controller-manager-k8s01      1/1     Running            4             33m     192.168.0.50   k8s01   <none>           <none>
+kube-scheduler-k8s01               1/1     Running            4             33m     192.168.0.50   k8s01   <none>           <none>
+metrics-server-779476777d-dlb7g    1/1     Running            0             3m40s   10.0.3.103     k8s07   <none>           <none>
+
+=== CILIUM CNI STATUS ===
+NAME           READY   STATUS             RESTARTS      AGE
+cilium-2lqw5   1/1     Running            0             13m
+cilium-4fqp2   0/1     CrashLoopBackOff   7 (56s ago)   12m
+cilium-m8mll   1/1     Running            0             13m
+cilium-mtxrj   1/1     Running            0             25m
+cilium-swglq   1/1     Running            0             13m
+cilium-vhjjm   1/1     Running            0             13m
+cilium-w95v9   1/1     Running            0             13m
+
+=== LONGHORN STORAGE STATUS ===
+NAME                                        READY   STATUS             RESTARTS        AGE
+longhorn-driver-deployer-6d5c74866f-wld4f   0/1     Init:0/1           0               11m
+longhorn-manager-2p5dd                      1/2     Running            0               11m
+longhorn-manager-dx9qz                      2/2     Running            3 (7m26s ago)   11m
+longhorn-manager-g7stc                      1/2     Running            0               11m
+longhorn-manager-jhdsn                      1/2     Running            0               11m
+longhorn-manager-szv9f                      1/2     Running            3 (75s ago)     11m
+longhorn-manager-tsnp4                      1/2     Running            2 (2m37s ago)   11m
+longhorn-ui-6cb46c8ff9-m7hkf                0/1     CrashLoopBackOff   6 (2m44s ago)   11m
+longhorn-ui-6cb46c8ff9-tht9k                0/1     CrashLoopBackOff   6 (2m58s ago)   11m
+
+Storage Classes:
+
+=== DASHBOARD STATUS ===
+NAME                                         READY   STATUS    RESTARTS   AGE
+dashboard-metrics-scraper-5bd45c9dd6-wrvjd   1/1     Running   0          116s
+kubernetes-dashboard-79cbcf9fb6-nd2h7        1/1     Running   0          116s
+
+=== INGRESS-NGINX STATUS ===
+NAME                                        READY   STATUS    RESTARTS   AGE
+ingress-nginx-controller-6bc5b79999-5wxvt   1/1     Running   0          64s
+
+NAME                                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                      AGE
+ingress-nginx-controller             NodePort    10.96.134.180   <none>        80:30080/TCP,443:30443/TCP   64s
+ingress-nginx-controller-admission   ClusterIP   10.97.92.72     <none>        443/TCP                      64s
+
+=== NAMESPACES ===
+NAME                   STATUS   AGE
+default                Active   34m
+ingress-nginx          Active   64s
+kube-node-lease        Active   34m
+kube-public            Active   34m
+kube-system            Active   34m
+kubernetes-dashboard   Active   116s
+longhorn-system        Active   11m
+
+===========================================
+DEPLOYMENT SUMMARY
+===========================================
+✓ Kubernetes v1.33.4 deployed
+✓ containerd v2.1.4 runtime
+✓ Cilium CNI v1.16.5 installed
+✓ Longhorn v1.9.1 storage provisioned
+✓ metrics-server v0.8.0 running
+✓ Dashboard v2.7.0 accessible
+✓ ingress-nginx v1.13.1 configured
+
+Cluster Nodes:
+- Control Plane: 1 node (k8s01)
+- Workers: 6 nodes (k8s04-k8s09)
+
+Note: Additional control plane nodes (k8s02, k8s03) pending join
+Note: VIP (192.168.0.199) configured but kube-vip not yet active
+
+===========================================
+Validation complete! Log saved to: logs/99-validation/validation-20250823_232435.log

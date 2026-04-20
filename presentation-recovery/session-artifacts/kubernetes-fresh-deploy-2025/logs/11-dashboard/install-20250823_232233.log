@@ -1,0 +1,4 @@
+Installing Kubernetes Dashboard v7.13.0
+========================================
+Installing Dashboard...
+error: unable to read URL "https://raw.githubusercontent.com/kubernetes/dashboard/v7.13.0/charts/kubernetes-dashboard.yaml", server reported 404 Not Found, status code=404

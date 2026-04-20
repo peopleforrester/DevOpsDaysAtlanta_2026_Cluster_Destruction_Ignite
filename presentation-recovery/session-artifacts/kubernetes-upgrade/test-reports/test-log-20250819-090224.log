@@ -1,0 +1,50 @@
+[2025-08-19 09:02:24] [INFO] Checking prerequisites...
+[2025-08-19 09:02:25] [SUCCESS] Prerequisites check passed
+[2025-08-19 09:02:25] [INFO] Running test: Prerequisites Test
+[2025-08-19 09:02:25] [INFO] Description: Verify all prerequisites are met
+[WARNING]: Using any_errors_fatal with the free strategy is not supported, as
+tasks are executed independently on each host
+Using /home/ollama/me/Zenitsu_mforrester-home-lab/kubernetes-upgrade/ansible.cfg as config file
+
+PLAY [Test Prerequisites and Environment Readiness] ****************************
+[WARNING]: Using run_once with the free strategy is not currently supported.
+This task will still be executed for every host in the inventory list.
+
+TASK [TEST | Check Ansible version] ********************************************
+ok: [k8s01 -> localhost] => changed=false 
+  msg: ✓ Ansible version 2.17.1 meets requirements
+
+TASK [TEST | Check Python version on control node] *****************************
+fatal: [k8s01 -> localhost]: FAILED! => changed=false 
+  module_stderr: |-
+    sudo: a password is required
+  module_stdout: ''
+  msg: |-
+    MODULE FAILURE
+    See stdout/stderr for the exact error
+  rc: 1
+
+TASK [Gathering Facts] *********************************************************
+ok: [k8s03]
+ok: [k8s07]
+ok: [k8s02]
+ok: [k8s04]
+ok: [k8s05]
+ok: [k8s08]
+ok: [k8s06]
+ok: [k8s09]
+	to retry, use: --limit @/home/ollama/me/Zenitsu_mforrester-home-lab/kubernetes-upgrade/.ansible-retry/01-test-prerequisites.retry
+
+PLAY RECAP *********************************************************************
+k8s01                      : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+k8s02                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+k8s03                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+k8s04                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+k8s05                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+k8s06                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+k8s07                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+k8s08                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+k8s09                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+[2025-08-19 09:02:38] [ERROR] Test Prerequisites Test FAILED (13s)
+[2025-08-19 09:02:38] [ERROR] Stopping test execution due to failure

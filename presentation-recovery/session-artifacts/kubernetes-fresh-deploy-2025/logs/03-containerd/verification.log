@@ -1,0 +1,19 @@
+containerd 2.1.4 Installation Verification
+==========================================
+
+All nodes successfully running containerd v2.1.4:
+
+k8s01 (192.168.0.50): containerd github.com/containerd/containerd/v2 v2.1.4
+k8s02 (192.168.0.51): containerd github.com/containerd/containerd/v2 v2.1.4
+k8s03 (192.168.0.52): containerd github.com/containerd/containerd/v2 v2.1.4
+k8s04 (192.168.0.53): containerd github.com/containerd/containerd/v2 v2.1.4
+k8s05 (192.168.0.54): containerd github.com/containerd/containerd/v2 v2.1.4
+k8s06 (192.168.0.55): containerd github.com/containerd/containerd/v2 v2.1.4
+k8s07 (192.168.0.56): containerd github.com/containerd/containerd/v2 v2.1.4
+k8s08 (192.168.0.57): containerd github.com/containerd/containerd/v2 v2.1.4
+k8s09 (192.168.0.58): containerd github.com/containerd/containerd/v2 v2.1.4
+
+Configuration:
+- SystemdCgroup: enabled (required for Kubernetes)
+- Service: enabled and running on all nodes
+- Runc: v1.2.4 installed

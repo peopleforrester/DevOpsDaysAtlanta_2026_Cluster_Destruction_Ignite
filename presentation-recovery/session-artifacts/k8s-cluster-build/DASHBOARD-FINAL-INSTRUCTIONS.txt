@@ -1,0 +1,45 @@
+KUBERNETES DASHBOARD - FINAL WORKING INSTRUCTIONS
+=================================================
+
+Since direct kubectl access from this environment isn't working due to network restrictions,
+use the SSH tunnel method:
+
+OPTION 1: Run the provided script
+----------------------------------
+./setup-dashboard-proxy.sh
+
+This script will:
+1. Create an SSH tunnel to the cluster
+2. Run kubectl proxy on the master node
+3. Forward it to your local port 8001
+
+Then access the dashboard at:
+http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard-web:/proxy/
+
+
+OPTION 2: Manual SSH tunnel
+---------------------------
+Run this command in your terminal:
+
+ssh -L 8001:localhost:8001 root@192.168.0.100 'kubectl proxy --port=8001'
+
+Then access the dashboard at:
+http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard-web:/proxy/
+
+
+ADMIN TOKEN FOR LOGIN:
+----------------------
+eyJhbGciOiJSUzI1NiIsImtpZCI6IndZLUxqSGxTUXgwMk53RHNIZDU1bG9GMkFIUjN1UnNYRnN6ODFVNEF5OHcifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiXSwiZXhwIjoxNzg1ODY1NTM3LCJpYXQiOjE3NTQzMjk1MzcsImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwianRpIjoiMjA1ODIxMGYtYjc0MS00NDY3LTk1YTYtNDIzZjhlNzE0MDIwIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsInNlcnZpY2VhY2NvdW50Ijp7Im5hbWUiOiJhZG1pbi11c2VyIiwidWlkIjoiYzgyYjVlYWItZDY1NS00ODM0LTkxNzgtZDM5NWQ1ZTJhOThmIn19LCJuYmYiOjE3NTQzMjk1MzcsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDprdWJlcm5ldGVzLWRhc2hib2FyZDphZG1pbi11c2VyIn0.ycpBCrBzmprKTEdcpMG20mjUsHJpm2HU5N5ZhWLXG6Ww0Dw65xlYZhkx89lmUiV9ogHc2kC8Dz2ZpSqLOrSIviNl6-whT-YwjJtF3TItiOiotRXkbQTyTjfRAEH95jFBJa3lHj3b-bayOuIMcnaehgqG74rclPlB0-trpoB9kLH7vr8lrQoDYwjlTlOaCvc-Iz-7TwrySntkUt7gBq4hTfvjOZflOmAT25LNyO3AM9ljMlBsLWDcOoDjhHg-aXmm_xylBmP9ia6R6GzV8rAKLohLkzHKsFO58coRUctTghaNWJ6GPiZkvQEKBwqqrTT-rY7ZBrvzHVDJ7pNKtAaFMw
+
+
+WHAT YOU'LL SEE:
+----------------
+1. The kubectl proxy command will start and show: "Starting to serve on 127.0.0.1:8001"
+2. Open your browser to the URL above
+3. Select "Token" authentication
+4. Paste the admin token
+5. Click "Sign In"
+6. You'll have full cluster admin access through the dashboard
+
+
+NOTE: Keep the terminal running while using the dashboard. Press Ctrl+C to stop when done.

@@ -1,0 +1,73 @@
+Installing Longhorn storage latest stable
+==========================================
+Installing prerequisites on all nodes...
+Installing on node 192.168.0.50...
+Synchronizing state of iscsid.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable iscsid
+Created symlink /etc/systemd/system/sysinit.target.wants/iscsid.service → /usr/lib/systemd/system/iscsid.service.
+Installing on node 192.168.0.53...
+Synchronizing state of iscsid.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable iscsid
+Installing on node 192.168.0.54...
+Synchronizing state of iscsid.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable iscsid
+Installing on node 192.168.0.55...
+Synchronizing state of iscsid.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable iscsid
+Installing on node 192.168.0.56...
+Synchronizing state of iscsid.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable iscsid
+Installing on node 192.168.0.57...
+Synchronizing state of iscsid.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable iscsid
+Installing on node 192.168.0.58...
+Synchronizing state of iscsid.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable iscsid
+Created symlink /etc/systemd/system/sysinit.target.wants/iscsid.service → /usr/lib/systemd/system/iscsid.service.
+✓ Prerequisites installed
+Getting latest stable version...
+✓ Latest version: v1.9.1
+Installing Longhorn v1.9.1...
+namespace/longhorn-system created
+priorityclass.scheduling.k8s.io/longhorn-critical created
+serviceaccount/longhorn-service-account created
+serviceaccount/longhorn-ui-service-account created
+serviceaccount/longhorn-support-bundle created
+configmap/longhorn-default-resource created
+configmap/longhorn-default-setting created
+configmap/longhorn-storageclass created
+customresourcedefinition.apiextensions.k8s.io/backingimagedatasources.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/backingimagemanagers.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/backingimages.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/backupbackingimages.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/backups.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/backuptargets.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/backupvolumes.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/engineimages.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/engines.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/instancemanagers.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/nodes.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/orphans.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/recurringjobs.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/replicas.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/settings.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/sharemanagers.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/snapshots.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/supportbundles.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/systembackups.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/systemrestores.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/volumeattachments.longhorn.io created
+customresourcedefinition.apiextensions.k8s.io/volumes.longhorn.io created
+clusterrole.rbac.authorization.k8s.io/longhorn-role created
+clusterrolebinding.rbac.authorization.k8s.io/longhorn-bind created
+clusterrolebinding.rbac.authorization.k8s.io/longhorn-support-bundle created
+service/longhorn-backend created
+service/longhorn-frontend created
+service/longhorn-conversion-webhook created
+service/longhorn-admission-webhook created
+service/longhorn-recovery-backend created
+daemonset.apps/longhorn-manager created
+deployment.apps/longhorn-driver-deployer created
+deployment.apps/longhorn-ui created
+Waiting for Longhorn to be ready...
+error: timed out waiting for the condition on deployments/longhorn-driver-deployer

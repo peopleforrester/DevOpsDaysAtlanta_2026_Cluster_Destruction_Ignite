@@ -1,0 +1,8 @@
+Joining worker nodes to cluster
+================================
+
+=== Joining k8s04 (192.168.0.53) ===
+Executing kubeadm join...
+[preflight] Running pre-flight checks
+error execution phase preflight: couldn't validate the identity of the API Server: failed to request the cluster-info ConfigMap: configmaps "cluster-info" is forbidden: User "system:anonymous" cannot get resource "configmaps" in API group "" in the namespace "kube-public"
+To see the stack trace of this error execute with --v=5 or higher

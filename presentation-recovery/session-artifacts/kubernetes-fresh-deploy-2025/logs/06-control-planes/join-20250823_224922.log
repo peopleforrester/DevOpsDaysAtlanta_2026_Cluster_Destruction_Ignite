@@ -1,0 +1,19 @@
+Joining additional control plane nodes
+=======================================
+
+=== Joining k8s02 (192.168.0.51) ===
+Executing kubeadm join...
+[preflight] Running pre-flight checks
+[preflight] Reading configuration from the "kubeadm-config" ConfigMap in namespace "kube-system"...
+[preflight] Use 'kubeadm init phase upload-config --config your-config-file' to re-upload it.
+error execution phase preflight: 
+One or more conditions for hosting a new control plane instance is not satisfied.
+
+unable to add a new control plane instance to a cluster that doesn't have a stable controlPlaneEndpoint address
+
+Please ensure that:
+* The cluster has a stable controlPlaneEndpoint address.
+* The certificates that must be shared among control plane instances are provided.
+
+
+To see the stack trace of this error execute with --v=5 or higher

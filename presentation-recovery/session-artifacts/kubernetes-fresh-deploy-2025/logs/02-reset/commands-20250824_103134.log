@@ -1,0 +1,10 @@
+[20250824_103134] Commands for k8s01 (192.168.0.50):
+  systemctl stop kubelet
+  kubeadm reset -f
+  systemctl stop containerd
+  systemctl disable containerd
+  ip link delete cni0/flannel.1/cilium_*
+  apt-get remove kubeadm kubectl kubelet kubernetes-cni
+  apt-get remove containerd.io
+  rm -rf /etc/kubernetes /var/lib/etcd /var/lib/kubelet /var/lib/containerd
+  rm -rf /etc/cni /opt/cni /var/lib/cni /var/run/calico

@@ -1,0 +1,149 @@
+Starting discovery at 20250823_215422
+================================================
+
+CONTROL PLANE NODES
+===================
+
+Checking k8s01 (192.168.0.50)...
+------------------------
+✓ Reachable
+✓ SSH accessible
+System Info:
+k8s01
+Ubuntu 24.04.3 LTS
+6.8.0-78-generic
+Kubernetes Status:
+  kubeadm: v1.33.4
+  kubelet: Kubernetes v1.33.4
+Container Runtime:
+  containerd: containerd containerd.io 1.7.27 05044ec0a9a75232cad458027ca83437aae3f4da
+  Running containers: 0
+
+Checking k8s02 (192.168.0.51)...
+------------------------
+✓ Reachable
+✓ SSH accessible
+System Info:
+k8s02
+Ubuntu 24.04.3 LTS
+6.8.0-78-generic
+Kubernetes Status:
+  kubeadm: v1.33.4
+  kubelet: Kubernetes v1.33.4
+Container Runtime:
+  containerd: containerd containerd.io 1.7.27 05044ec0a9a75232cad458027ca83437aae3f4da
+  Running containers: 0
+
+Checking k8s03 (192.168.0.52)...
+------------------------
+✓ Reachable
+✓ SSH accessible
+System Info:
+k8s03
+Ubuntu 24.04.3 LTS
+6.14.0-28-generic
+Kubernetes Status:
+  kubeadm: v1.33.4
+  kubelet: Kubernetes v1.33.4
+Container Runtime:
+  containerd: containerd containerd.io 1.7.27 05044ec0a9a75232cad458027ca83437aae3f4da
+  Running containers: 4
+
+WORKER NODES
+============
+
+Checking k8s04 (192.168.0.53)...
+------------------------
+✓ Reachable
+✓ SSH accessible
+System Info:
+k8s04
+Ubuntu 24.04.3 LTS
+6.14.0-28-generic
+Kubernetes Status:
+  kubeadm: v1.33.4
+  kubelet: Kubernetes v1.33.4
+Container Runtime:
+  containerd: containerd containerd.io 1.7.27 05044ec0a9a75232cad458027ca83437aae3f4da
+  Running containers: 0
+
+Checking k8s05 (192.168.0.54)...
+------------------------
+✓ Reachable
+✓ SSH accessible
+System Info:
+k8s05
+Ubuntu 24.04.3 LTS
+6.14.0-28-generic
+Kubernetes Status:
+  kubeadm: v1.33.4
+  kubelet: Kubernetes v1.33.4
+Container Runtime:
+  containerd: containerd containerd.io 1.7.27 05044ec0a9a75232cad458027ca83437aae3f4da
+  Running containers: 0
+
+Checking k8s06 (192.168.0.55)...
+------------------------
+✓ Reachable
+✓ SSH accessible
+System Info:
+k8s06
+Ubuntu 24.04.3 LTS
+6.14.0-28-generic
+Kubernetes Status:
+  kubeadm: v1.33.4
+  kubelet: Kubernetes v1.33.4
+Container Runtime:
+  containerd: containerd containerd.io 1.7.27 05044ec0a9a75232cad458027ca83437aae3f4da
+  Running containers: 0
+
+Checking k8s07 (192.168.0.56)...
+------------------------
+✓ Reachable
+✓ SSH accessible
+System Info:
+k8s07
+Ubuntu 24.04.3 LTS
+6.14.0-28-generic
+Kubernetes Status:
+  kubeadm: v1.33.4
+  kubelet: Kubernetes v1.33.4
+Container Runtime:
+  containerd: containerd containerd.io 1.7.27 05044ec0a9a75232cad458027ca83437aae3f4da
+  Running containers: -1
+
+Checking k8s08 (192.168.0.57)...
+------------------------
+✓ Reachable
+✓ SSH accessible
+System Info:
+k8s08
+Ubuntu 24.04.3 LTS
+6.14.0-28-generic
+Kubernetes Status:
+  kubeadm: v1.33.4
+  kubelet: Kubernetes v1.33.4
+Container Runtime:
+  containerd: containerd containerd.io 1.7.27 05044ec0a9a75232cad458027ca83437aae3f4da
+  Running containers: 0
+
+Checking k8s09 (192.168.0.58)...
+------------------------
+✓ Reachable
+✓ SSH accessible
+System Info:
+k8s09
+Ubuntu 24.04.2 LTS
+6.14.0-28-generic
+Kubernetes Status:
+  kubeadm: v1.33.4
+  kubelet: Kubernetes v1.33.4
+Container Runtime:
+  containerd: containerd containerd.io 1.7.27 05044ec0a9a75232cad458027ca83437aae3f4da
+  Running containers: 0
+
+Creating state file...
+
+Discovery complete!
+Logs saved to: logs/01-discovery/discovery-20250823_215422.log
+State saved to: logs/01-discovery/state-20250823_215422.json

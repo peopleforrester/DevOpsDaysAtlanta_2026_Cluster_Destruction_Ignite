@@ -1,0 +1,8 @@
+===========================================
+Kubernetes Cluster Final Validation
+===========================================
+
+=== CLUSTER INFORMATION ===
+Kubernetes Version:
+error: unknown flag: --short
+See 'kubectl version --help' for usage.

@@ -1,0 +1,32 @@
+KUBERNETES DASHBOARD ACCESS INFORMATION
+======================================
+
+DASHBOARD URLs:
+--------------
+You can access the dashboard from ANY node using port 30443:
+
+https://192.168.0.100:30443
+https://192.168.0.101:30443
+https://192.168.0.102:30443
+https://192.168.0.103:30443
+https://192.168.0.104:30443
+
+ADMIN TOKEN:
+-----------
+eyJhbGciOiJSUzI1NiIsImtpZCI6IndZLUxqSGxTUXgwMk53RHNIZDU1bG9GMkFIUjN1UnNYRnN6ODFVNEF5OHcifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiXSwiZXhwIjoxNzg1ODY1NTM3LCJpYXQiOjE3NTQzMjk1MzcsImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwianRpIjoiMjA1ODIxMGYtYjc0MS00NDY3LTk1YTYtNDIzZjhlNzE0MDIwIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsInNlcnZpY2VhY2NvdW50Ijp7Im5hbWUiOiJhZG1pbi11c2VyIiwidWlkIjoiYzgyYjVlYWItZDY1NS00ODM0LTkxNzgtZDM5NWQ1ZTJhOThmIn19LCJuYmYiOjE3NTQzMjk1MzcsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDprdWJlcm5ldGVzLWRhc2hib2FyZDphZG1pbi11c2VyIn0.ycpBCrBzmprKTEdcpMG20mjUsHJpm2HU5N5ZhWLXG6Ww0Dw65xlYZhkx89lmUiV9ogHc2kC8Dz2ZpSqLOrSIviNl6-whT-YwjJtF3TItiOiotRXkbQTyTjfRAEH95jFBJa3lHj3b-bayOuIMcnaehgqG74rclPlB0-trpoB9kLH7vr8lrQoDYwjlTlOaCvc-Iz-7TwrySntkUt7gBq4hTfvjOZflOmAT25LNyO3AM9ljMlBsLWDcOoDjhHg-aXmm_xylBmP9ia6R6GzV8rAKLohLkzHKsFO58coRUctTghaNWJ6GPiZkvQEKBwqqrTT-rY7ZBrvzHVDJ7pNKtAaFMw
+
+HOW TO ACCESS:
+--------------
+1. Open your browser and navigate to one of the URLs above
+2. You'll get a security warning (self-signed certificate) - click "Advanced" and proceed
+3. Select "Token" authentication method
+4. Paste the admin token above
+5. Click "Sign In"
+
+TOKEN VALIDITY:
+--------------
+This token is valid for 1 year (expires: 2026-08-04)
+
+ADMIN PRIVILEGES:
+-----------------
+This token has cluster-admin role with full access to all resources.

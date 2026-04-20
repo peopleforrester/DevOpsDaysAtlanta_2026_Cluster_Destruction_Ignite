@@ -1,0 +1,82 @@
+[2025-08-19 09:03:55] [SECTION] Phase 0: Pre-flight Checks
+[2025-08-19 09:03:55] [WARNING] Skipping pre-flight checks (--skip-tests flag)
+[2025-08-19 09:03:55] [SECTION] Phase 1: Comprehensive Testing
+[2025-08-19 09:03:55] [WARNING] Skipping comprehensive tests
+[2025-08-19 09:03:55] [SECTION] Phase 2: Backup Creation
+[2025-08-19 09:03:55] [INFO] Executing: Cluster backup
+Using /home/ollama/me/Zenitsu_mforrester-home-lab/kubernetes-upgrade/ansible.cfg as config file
+
+PLAY [Comprehensive Kubernetes Cluster Backup] *********************************
+
+TASK [Ensure backup directories exist] *****************************************
+changed: [k8s01] => (item=/backup/kubernetes/2025-08-19-1.31.10) => changed=true 
+  ansible_loop_var: item
+  item: /backup/kubernetes/2025-08-19-1.31.10
+  path: /backup/kubernetes/2025-08-19-1.31.10
+changed: [k8s01] => (item=/backup/kubernetes/2025-08-19-1.31.10/etcd) => changed=true 
+  ansible_loop_var: item
+  item: /backup/kubernetes/2025-08-19-1.31.10/etcd
+  path: /backup/kubernetes/2025-08-19-1.31.10/etcd
+changed: [k8s01] => (item=/backup/kubernetes/2025-08-19-1.31.10/certificates) => changed=true 
+  ansible_loop_var: item
+  item: /backup/kubernetes/2025-08-19-1.31.10/certificates
+  path: /backup/kubernetes/2025-08-19-1.31.10/certificates
+changed: [k8s01] => (item=/backup/kubernetes/2025-08-19-1.31.10/manifests) => changed=true 
+  ansible_loop_var: item
+  item: /backup/kubernetes/2025-08-19-1.31.10/manifests
+  path: /backup/kubernetes/2025-08-19-1.31.10/manifests
+changed: [k8s01] => (item=/backup/kubernetes/2025-08-19-1.31.10/configs) => changed=true 
+  ansible_loop_var: item
+  item: /backup/kubernetes/2025-08-19-1.31.10/configs
+  path: /backup/kubernetes/2025-08-19-1.31.10/configs
+changed: [k8s01] => (item=/backup/kubernetes/2025-08-19-1.31.10/resources) => changed=true 
+  ansible_loop_var: item
+  item: /backup/kubernetes/2025-08-19-1.31.10/resources
+  path: /backup/kubernetes/2025-08-19-1.31.10/resources
+changed: [k8s01] => (item=/backup/kubernetes/2025-08-19-1.31.10/secrets) => changed=true 
+  ansible_loop_var: item
+  item: /backup/kubernetes/2025-08-19-1.31.10/secrets
+  path: /backup/kubernetes/2025-08-19-1.31.10/secrets
+changed: [k8s01] => (item=/backup/kubernetes/2025-08-19-1.31.10/verification) => changed=true 
+  ansible_loop_var: item
+  item: /backup/kubernetes/2025-08-19-1.31.10/verification
+  path: /backup/kubernetes/2025-08-19-1.31.10/verification
+
+TASK [Initialize backup manifest] **********************************************
+changed: [k8s01] => changed=true
+
+TASK [BACKUP | Compress etcd snapshot] *****************************************
+ok: [k8s01] => changed=false 
+  archived: []
+  arcroot: /backup/kubernetes/2025-08-19-1.31.10/etcd/
+  dest: /backup/kubernetes/2025-08-19-1.31.10/etcd/etcd-snapshot-1755608375.db.tar.gz
+  dest_state: absent
+  expanded_exclude_paths: []
+  expanded_paths:
+  - /backup/kubernetes/2025-08-19-1.31.10/etcd/etcd-snapshot-1755608375.db
+  missing:
+  - /backup/kubernetes/2025-08-19-1.31.10/etcd/etcd-snapshot-1755608375.db
+
+TASK [BACKUP | Calculate etcd backup checksum] *********************************
+ok: [k8s01] => changed=false 
+  stat:
+    exists: false
+
+TASK [BACKUP | Save etcd backup metadata] **************************************
+fatal: [k8s01]: FAILED! => 
+  msg: |-
+    The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'size'
+  
+    The error appears to be in '/home/ollama/me/Zenitsu_mforrester-home-lab/kubernetes-upgrade/playbooks/01-backup-cluster.yml': line 84, column 7, but may
+    be elsewhere in the file depending on the exact syntax problem.
+  
+    The offending line appears to be:
+  
+  
+        - name: "BACKUP | Save etcd backup metadata"
+          ^ here
+	to retry, use: --limit @/home/ollama/me/Zenitsu_mforrester-home-lab/kubernetes-upgrade/.ansible-retry/01-backup-cluster.retry
+
+PLAY RECAP *********************************************************************
+k8s01                      : ok=4    changed=2    unreachable=0    failed=1    skipped=2    rescued=0    ignored=0   
+
