@@ -5,6 +5,12 @@
 DevOpsDays Atlanta 2026 — *The Day Claude Code Deleted My Cluster.* Michael
 Forrester (@peopleforrester).
 
+> **The material now lives in a canonical repo.**
+> This repo stays as the record of the Atlanta delivery. The talk's evidence,
+> the Eight Guardrails Framework, the incident forensics, and the current deck
+> are maintained at
+> [**the-day-claude-code-deleted-my-cluster**](https://github.com/peopleforrester/the-day-claude-code-deleted-my-cluster).
+
 ---
 
 ## The thesis, in one line
